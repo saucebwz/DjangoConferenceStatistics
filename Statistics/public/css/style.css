@@ -5,6 +5,7 @@
 
 body{
     font-family: sans-serif;
+    background:#D3E9F4;
 }
 
 .admin-panel{
@@ -26,7 +27,6 @@ body{
 header{
     text-align: center;height: 95vh;
     /*background: url("http://i.imgur.com/zu4Efeg.jpg") no-repeat center;*/
-    background:#D3E9F4;
     background-size: cover;
 }
 
@@ -38,10 +38,10 @@ header{
 }
 
 .main-section{
-
+    text-align: center;
 }
 .in-costume{
-    padding-top: 20px;
+    padding: 40px 0;
 }
 
 .big-text{
@@ -75,8 +75,34 @@ rect:hover{
     margin-top: 20px;
 }
 
-.draw-top > p{
+
+
+.info-text{
     text-transform: uppercase;
     font-size: 30px;
     color: #43737F;
+    text-align: center;
 }
+
+svg{
+    border-bottom: 20px solid #2B4059;
+}
+
+
+
+.yb-arc text {  
+    font: 20px sans-serif;  
+    text-anchor: middle;
+    cursor: pointer;
+}
+
+.yb-arc path {
+  stroke: #fff;
+}
+/*path:hover{*/
+    /*stroke: #7f8c8d;*/
+    /*stroke-width: 5px;*/
+/*}*/
+
+
+
