@@ -14,6 +14,12 @@ body{
     text-align: center;
 }
 
+.line {
+  fill: none;
+  stroke: #8e44ad;
+  stroke-width: 1.5px;
+}
+
 .top-diagram{
     margin-top: 100px;
 }
@@ -37,19 +43,14 @@ header{
     padding: 30px;
 }
 
-.main-section{
+.youtube-section{
     text-align: center;
 }
-.in-costume{
-    padding: 40px 0;
-}
 
-.big-text{
-    font-size: 40px;
-    text-transform: uppercase;
-}
 
-rect:hover{
+
+
+.top-diagram rect:hover{
     fill: #5e93ac;
 }
 
@@ -63,31 +64,22 @@ rect:hover{
 }
 
 
-
-
-.d3-tip.n:after {
-    margin: -1px 0 0 0;
-    top: 100%;
-    left: 0;
-}
-
-.draw-top{
-    margin-top: 20px;
-}
-
-
-
-.info-text{
-    text-transform: uppercase;
+.section-title {
     font-size: 30px;
+    text-transform: uppercase;
+    padding: 40px 0;
     color: #43737F;
     text-align: center;
 }
 
-svg{
-    border-bottom: 20px solid #2B4059;
+section{
+    text-align: center;
 }
 
+
+.draw-top{
+    margin-top: 20px;
+}
 
 
 .yb-arc text {  
@@ -99,10 +91,20 @@ svg{
 .yb-arc path {
   stroke: #fff;
 }
-/*path:hover{*/
-    /*stroke: #7f8c8d;*/
-    /*stroke-width: 5px;*/
-/*}*/
+
+.x-axis, .y-axis{
+    stroke-width: 3px;
+    stroke: #7EC7E7;
+    fill: none;
+}
 
 
+.x-axis text{
+    stroke: #43737F;
+    stroke-width: 1.5px;
+}
+.y-axis text{
+    stroke: #43737F;
+    stroke-width: 1.5px;
+}
 

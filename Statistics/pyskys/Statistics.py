@@ -90,24 +90,27 @@ class Statistics:
             'NIGHT': time(23, 0, 0)
         }
         activity_counter = Counter()
+        em, m, n, an, e, ni = 0, 0, 0, 0, 0, 0
         for message in messages:
             timestamp = message[-1]
             time_from_epoch = datetime.fromtimestamp(timestamp/1000)
             message_time = time(time_from_epoch.hour, time_from_epoch.minute, time_from_epoch.second)
+
             if ACTIVITY_TIMES['EARLIER_MORNING'] < message_time < ACTIVITY_TIMES['MORNING']:
-                activity_counter['EARLIER_MORNING'] += 1
+                em += 1
             elif ACTIVITY_TIMES['MORNING'] < message_time < ACTIVITY_TIMES['NOON']:
-                activity_counter['MORNING'] += 1
+                m += 1
             elif ACTIVITY_TIMES['NOON'] < message_time < ACTIVITY_TIMES['AFTERNOON']:
-                activity_counter['NOON'] += 1
+                n += 1
             elif ACTIVITY_TIMES['AFTERNOON'] < message_time < ACTIVITY_TIMES['EVENING']:
-                activity_counter['AFTERNOON'] += 1
+                an += 1
             elif ACTIVITY_TIMES['EVENING'] < message_time < ACTIVITY_TIMES['NIGHT']:
-                activity_counter['EVENING'] += 1
+                e += 1
             else:
-                activity_counter['NIGHT'] += 1
-        cls.write_result({'activity': activity_counter})
-        return True
+                ni += 1
+        print("{0}, {1}, {2}".format(em, m, n))
+        cls.write_result({'activity': [["Раннее утро", em], ["Утро", m], ["Полдень", n], ["После полудня", an], ["Вечер", e],
+                          ["Ночь", ni]]})
 
     def get_use_word_count(self, word, messages=None):
         messages = messages if messages else self.messages

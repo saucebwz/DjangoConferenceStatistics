@@ -37,6 +37,7 @@ class Home(View):
             stats = Statistics()
             sq = StatisticQueue(stats)
             result = sq.start_parse()
+
             sm = StatisticsModel(common_videos=json.dumps(result['common_videos']), activity=json.dumps(result['activity']),
                                  top=json.dumps(result['top']), abusive=json.dumps(result['abusive']), total=json.dumps(result['total']))
             sm.save()
