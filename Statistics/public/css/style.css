@@ -76,6 +76,41 @@ section{
     text-align: center;
 }
 
+.stats-table{
+    float: left;
+    border-collapse: collapse;
+    margin-left: 35px;
+}
+
+
+.stats-table:first-child{
+    margin-left: 0;
+}
+
+.go-youtube{
+    cursor: pointer;
+}
+
+.stats-table th, td{
+    padding: 0.5em;
+    border: 1px solid #43737F;
+}
+
+.stats-table td{
+    color: #2c3e50;
+}
+
+.stats-table th{
+    color: #2c3e50;
+}
+
+.dashboard-wrapper{
+    width: 800px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+ 
 
 .draw-top{
     margin-top: 20px;

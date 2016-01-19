@@ -136,7 +136,7 @@ class Statistics:
             messages_by_author = list(self._filter_messages_by_author(author))
             for msg in messages_by_author:
                 abusive_counter[author] += matfilter(msg)
-        cls.write_result({'abusive': abusive_counter})
+        cls.write_result({'abusive': abusive_counter.most_common()})
 
 
 
